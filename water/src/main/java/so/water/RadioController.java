@@ -24,4 +24,19 @@ public class RadioController {
 	public void previous() {
 		label.setText(Integer.toString(Integer.parseInt(label.getText())-1));
 	}
+	
+	@FXML
+	public void save() {
+		
+	}
+	
+	@FXML
+	public void find() {
+		
+	}
+	
+	@FXML
+	public void list() {
+		
+	}
 }
