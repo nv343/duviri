@@ -21,7 +21,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <JFXButton buttonType="RAISED" ripplerFill="#647c90" style="-fx-background-color: #E2DED0;" text="Map" textFill="#746c70" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton buttonType="RAISED" onAction="#switchToMap" ripplerFill="#647c90" style="-fx-background-color: #E2DED0;" text="Map" textFill="#746c70" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Calibri" size="15.0" />
                      </font>
@@ -30,7 +30,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <JFXButton ripplerFill="#4e4f50" style="-fx-background-color: #746C70;" text="Radio" textFill="#e2ded0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXButton onAction="#switchToRadio" ripplerFill="#4e4f50" style="-fx-background-color: #746C70;" text="Radio" textFill="#e2ded0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Calibri" size="15.0" />
                      </font>
