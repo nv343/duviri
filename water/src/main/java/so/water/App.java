@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import database.Conn;
+
 /**
  * JavaFX App
  */
@@ -17,10 +19,12 @@ public class App extends Application {
 
 	@Override
 	public void start(Stage stage) throws IOException, InterruptedException {
-		// Conn.getEntityManager().close();
 		scene = new Scene(loadFXML("loading"));
 		stage.setScene(scene);
 		stage.show();
+		Conn.getEntityManager().close();
+		Thread.sleep(1500);
+		App.setRoot("primary");
 	}
 
 	static void setRoot(String fxml) throws IOException {
@@ -34,7 +38,7 @@ public class App extends Application {
 
 	@Override
 	public void stop() throws Exception {
-		// Conn.closeConn();
+		Conn.closeConn();
 		super.stop();
 	}
 

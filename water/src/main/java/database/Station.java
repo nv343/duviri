@@ -4,18 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Stations {
+public class Station {
 	
 	@Id
 	private String station;
 	private String name;
 	private String description;
 	
-	public Stations() {
+	public Station() {
 		
 	}
 
-	public Stations(String station, String name, String description) {
+	public Station(String station, String name, String description) {
 		super();
 		this.station = station;
 		this.name = name;
@@ -64,7 +64,7 @@ public class Stations {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Stations other = (Stations) obj;
+		Station other = (Station) obj;
 		if (description == null) {
 			if (other.description != null)
 				return false;
