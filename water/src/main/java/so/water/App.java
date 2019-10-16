@@ -16,15 +16,16 @@ import database.Conn;
 public class App extends Application {
 
 	private static Scene scene;
+	private Timer timer;
 
 	@Override
-	public void start(Stage stage) throws IOException, InterruptedException {
+	public void start(Stage stage) throws IOException {
 		scene = new Scene(loadFXML("loading"));
 		stage.setScene(scene);
 		stage.show();
-		Conn.getEntityManager().close();
-		Thread.sleep(1500);
-		App.setRoot("primary");
+		timer.start();
+		
+		
 	}
 
 	static void setRoot(String fxml) throws IOException {

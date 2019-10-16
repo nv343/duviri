@@ -1,6 +1,8 @@
 package so.water;
 
 import java.io.IOException;
+
+import database.Conn;
 import javafx.fxml.FXML;
 
 public class PrimaryController {
@@ -28,6 +30,11 @@ public class PrimaryController {
 	@FXML
 	private void switchToRadio() throws IOException {
 		App.setRoot("radio");
+	}
+	@FXML
+	private void begin() throws IOException {
+		
+		App.setRoot("primary");
 	}
 	
 }
