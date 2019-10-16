@@ -85,7 +85,7 @@ public class Station {
 
 	@Override
 	public String toString() {
-		return "Stations [station=" + station + ", name=" + name + ", description=" + description + "]";
+		return ""+ station + "FM, " + name + ", " + description + ".";
 	}
 	
 }

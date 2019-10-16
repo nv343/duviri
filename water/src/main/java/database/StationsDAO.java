@@ -29,7 +29,7 @@ public class StationsDAO implements InterfaceDAO<Station> {
 		if (stations == null) {
 			EntityManager entityMng = Conn.getEntityManager();
 			stations = FXCollections.observableArrayList(
-					entityMng.createQuery("select station from Stations as station", Station.class).getResultList());
+					entityMng.createQuery("select station from Station as station", Station.class).getResultList());
 			entityMng.close();
 		}
 		return stations;

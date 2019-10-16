@@ -16,16 +16,13 @@ import database.Conn;
 public class App extends Application {
 
 	private static Scene scene;
-	private Timer timer;
 
 	@Override
 	public void start(Stage stage) throws IOException {
 		scene = new Scene(loadFXML("loading"));
 		stage.setScene(scene);
 		stage.show();
-		timer.start();
-		
-		
+		Conn.getEntityManager().close();
 	}
 
 	static void setRoot(String fxml) throws IOException {
@@ -42,5 +39,6 @@ public class App extends Application {
 		Conn.closeConn();
 		super.stop();
 	}
+
 
 }

@@ -19,7 +19,7 @@ public class Conn {
 
 	private static EntityManagerFactory getEntityManagerFactory() {
 		if (entityManagerFactory == null)
-			entityManagerFactory = Persistence.createEntityManagerFactory("so.water");
+			entityManagerFactory = Persistence.createEntityManagerFactory("database");
 		return entityManagerFactory;
 	}
 
