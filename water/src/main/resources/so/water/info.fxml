@@ -35,7 +35,7 @@
    <top>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#load" prefHeight="50.0" prefWidth="600.0" ripplerFill="#4e4f50" style="-fx-background-color: #746C70;" text="Back" textFill="#e2ded0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#load" prefHeight="50.0" prefWidth="600.0" ripplerFill="#4e4f50" style="-fx-background-color: #4E4F50;" text="Back" textFill="#e2ded0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
                   <Font name="Calibri" size="25.0" />
                </font>

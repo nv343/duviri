@@ -2,7 +2,10 @@ package so.water;
 
 import java.io.IOException;
 
+import com.jfoenix.controls.JFXButton;
+
 import database.*;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,11 +23,16 @@ public class EditController {
 	
 	private StationsController stationController;
 	
-	public void update() throws IOException {
+	@FXML
+	public void update(ActionEvent e) throws IOException {
 		Station station = new Station(stationNumber.getText(), name.getText(), description.getText());
 		new StationsDAO().update(station);
+		JFXButton btn = (JFXButton) e.getSource();
+		Scene scene = btn.getScene();
+		Stage stage = (Stage) scene.getWindow();
 		stationController.updateList();
-		App.setRoot("stations");
+		stage.close();
+			
 		
 	}
 
@@ -35,8 +43,12 @@ public class EditController {
 		this.stationController = stationController;
 	}
 	
-	public void cancel() throws IOException {
-		App.setRoot("stations");
+	@FXML 
+	public void cancel(ActionEvent e) throws IOException {
+		JFXButton btn = (JFXButton) e.getSource();
+		Scene scene = btn.getScene();
+		Stage stage = (Stage) scene.getWindow();
+		stage.close();
 	}
 
 }

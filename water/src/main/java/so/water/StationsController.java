@@ -34,21 +34,29 @@ public class StationsController implements Initializable{
 	
 	@FXML
 	public void switchToPrimary() throws IOException {
-		App.setRoot("primary");
+		App.setRoot("radio");
 	}
 	
 	
+	@FXML
 	public void delete() {
 		new StationsDAO().delete(StationList.getSelectionModel().getSelectedItem());
 	}
 	
+	@FXML
 	public void save() throws IOException {
 		App.setRoot("save");
 	}
 
+	@FXML
 	public void edit() throws IOException {
-		App.setRoot("edit");
-		EditController controller = new EditController();
+		FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("edit.fxml"));
+		Parent parent = fxmlLoader.load();
+		Scene scene = new Scene(parent);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.show();
+		EditController controller = (EditController) fxmlLoader.getController();
 		controller.selectedStation(StationList.getSelectionModel().getSelectedItem(), this);
 	}
 }
